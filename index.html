@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" ></link> 
+        <link href="mystyles.css" rel="stylesheet" ></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+        <script src="https://js.pusher.com/7.0.3/pusher.min.js"></script>
+        
+        <title>chatting Application</title>
+    </head>
+    
+    <body style="text-align: center; background-color: rgb(38, 40, 44); color: rgb(144, 179, 255);font-size: 20px;">
+    <section class="container">
+        <div>
+            <h1><strong>chatting Application</strong></h1>
+        </div> 
+    </section> 
+   
+    <section class="container" style="display: none;" id="chat">
+        <div class="text row text-center" id="info">
+            <label for="groupname" class="label  col-lg-3 col-sm-12" id="groupname"> </label>
+            <label for="activeusers" class="label col-lg-3 col-sm-12" id="activemembers"></label> 
+            <button class="btn btn-primary offset-lg-4 col-lg-2" id="logout" onClick="logOut()" >log out</button>
+        </div> 
+    <div class="h-auto d-max" id="chatarea" style="background-color: rgb(119, 119, 119); color: rgb(144, 179, 255);">  
+        <div class="row " id="mymsg">
+        </div>
+    </div> 
+    
+    <div id="inputs">
+        <div class=" form-group row">
+            <input type="text-area" class="text text-area col-lg-8 col-md-8 col-sm-9" id="mymsg2">
+            <button class="btn btn-success offset-lg-1 col-lg-2 offset-md-1  col-md-2 offset-sm-1 col-sm-2" id="msgsend" onClick="msgsend()">Send <br> "press Enter"</button>
+        </div>
+    </div>
+    </section>
+    <section class="container" style="display: block;" id="login_form">
+        <div class="form-group">
+               <div class="mt-5"> 
+                <input class="text " type="text" id="entername" placeholder="Enter name">
+               </div> 
+               <div class="mt-5">
+                <input class="text " type="text" id="entergroup" placeholder="Group name">
+               </div>  
+               <button class="btn btn-primary mt-5" id="login" onClick="login()">Join group</button>
+        </div>
+    </section>
+
+    
+   
+   
+    <script src="myscript.js"></script>
+    <script src="pusher.js"></script>
+     
+    </body>
+</html>
